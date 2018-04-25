@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"path"
 	"strconv"
+	"fmt"
 )
 
 type Post struct {
@@ -19,6 +20,7 @@ func main() {
 	}
 	http.HandleFunc("/post/", handleRequest)
 	server.ListenAndServe()
+	fmt.Println("Server is listening on port 8080")
 }
 func handleRequest(w http.ResponseWriter, r *http.Request) {
 	var err error
