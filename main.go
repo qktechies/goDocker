@@ -15,7 +15,7 @@ type Post struct {
 
 func main() {
 	server := http.Server{
-		Addr: "0.0.0.0:8080",
+		Addr: ":8080",
 	}
 	http.HandleFunc("/post/", handleRequest)
 	server.ListenAndServe()
