@@ -53,9 +53,8 @@ func handleGet(w http.ResponseWriter, r *http.Request) (err error) {
 		return
 	}
 	fmt.Println(output)
-	//w.Header().Set("Content-Type", "application/json")
-	//w.Write(output)
-	w.Write([]byte("changed success"))
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(output)
 	return
 }
 func handlePost(w http.ResponseWriter, r *http.Request) (err error) {
