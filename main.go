@@ -53,7 +53,7 @@ func handleGet(w http.ResponseWriter, r *http.Request) (err error) {
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")
-	w.Write(output)
+	w.Write([]byte("Changed success"))
 	return
 }
 func handlePost(w http.ResponseWriter, r *http.Request) (err error) {
